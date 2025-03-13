@@ -42,11 +42,13 @@ label {
     color: #4e342e;
 }
 
-.form-control {
+.form-control:focus {
+    border: 2px solid #6d4c41;
     width: 100%;
     padding: 10px;
     border-radius: 25px;
     box-sizing: border-box;
+    outline: none;
 }
 
 .btn {
@@ -58,6 +60,7 @@ label {
 }
 
 .btn:hover {
+    transform: scale(1.05);
     background-color: #58392f;
 }
 

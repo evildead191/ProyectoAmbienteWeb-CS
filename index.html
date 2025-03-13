@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Rural</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Biblioteca Rural</h1>
+
+        <form id="formulario-libro">
+            <h2>Agregar Libro</h2>
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="genero">Género:</label>
+                <input type="text" id="genero" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="anio">Año de Publicación:</label>
+                <input type="number" id="anio" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Libro</button>
+        </form>
+
+            <div class="busqueda">
+            <h2>Buscar Libros</h2>
+            <input type="text" id="buscar" class="form-control" placeholder="Buscar por título, autor o género">
+        </div>
+
+        <!-- Lista de libros -->
+        <div class="lista-libros">
+            <h2>Libros Disponibles</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Género</th>
+                        <th>Año</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-libros">
+                </tbody>
+            </table>
+        </div>
+
+        
+        <form id="formulario-prestamo">
+            <h2>Registrar Préstamo</h2>
+            <div class="form-group">
+                <label for="libro-prestamo">Libro:</label>
+                <select id="libro-prestamo" class="form-control" required>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lector">Nombre del Lector:</label>
+                <input type="text" id="lector" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha-prestamo">Fecha de Préstamo:</label>
+                <input type="date" id="fecha-prestamo" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Préstamo</button>
+        </form>
+
+        <div class="lista-prestamos">
+            <h2>Préstamos Activos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Libro</th>
+                        <th>Lector</th>
+                        <th>Fecha de Préstamo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-prestamos">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

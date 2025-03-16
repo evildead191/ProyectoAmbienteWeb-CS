@@ -1,0 +1,76 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d2b48c;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 85%;
+    margin: auto;
+    background: rgb(252, 216, 179);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #4e342e;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las secciones de radio (cambio de idioma) */
+.section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    font-size: 18px;
+    color: #6d4c41;
+    padding: 10px 20px;
+    background-color: #efebe9;
+    border-radius: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+label:hover {
+    background-color: #d7ccc8;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #6d4c41;
+    color: white;
+}
+
+/* Ocultar contenido de idiomas por defecto */
+.section-content {
+    margin-top: 20px;
+}
+
+.content {
+    display: none;
+}
+
+input[type="radio"]#espanol:checked ~ .section-content #content-espanol,
+input[type="radio"]#ingles:checked ~ .section-content #content-ingles {
+    display: block;
+}
+.idioma-image {
+    width: 100%;  /* La imagen se ajusta al tamaño del contenedor */
+    max-width: 1000px;  /* Máximo tamaño */
+    height: auto;  /* Mantiene la proporción */
+    border-radius: 10px;  /* Bordes redondeados */
+    margin-top: 20px;
+}

@@ -1,0 +1,93 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d2b48c;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    background: rgb(252, 216, 179);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #4e342e;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de offline */
+.offline-toggle {
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: #6d4c41;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #58392f;
+}
+
+/* Información offline */
+.offline-info, .online-info {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #4e342e;
+}
+
+.offline-info {
+    background-color: #f5d0a9;
+    display: none; /* Inicialmente oculto */
+}
+
+.online-info {
+    background-color: #a5d6a7;
+    display: block; /* Visible cuando no está en modo offline */
+}
+
+/* Estilo de la imagen */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%; /* Se asegura de que ocupe todo el ancho disponible */
+    overflow: hidden; /* Se asegura de que no se salga del contenedor */
+}
+
+#biblioteca-image {
+    width: 100%; /* Se adapta al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor sin distorsionarse */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo cuando el botón es presionado (modo offline activado) */
+#toggle-button:active ~ .offline-info {
+    display: block;
+}
+
+#toggle-button:active ~ .online-info {
+    display: none;
+}
+
+/* Estilo para cambiar el texto del botón cuando está activado */
+#toggle-button:active {
+    background-color: #d32f2f;
+}

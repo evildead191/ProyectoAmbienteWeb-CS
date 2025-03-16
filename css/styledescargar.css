@@ -1,10 +1,12 @@
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding: 20px;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Define Arial como fuente principal */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
+/* Barra de navegación */
 nav {
     background-color: #333;
     padding: 10px;
@@ -32,6 +34,15 @@ nav ul li a:hover {
     color: #28a745;
 }
 
+/* Contenedor principal */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+/* Botón de descargar */
 .descargar {
     background-color: #e6c7a5;
     border: none;
@@ -46,5 +57,3 @@ nav ul li a:hover {
 .descargar:hover {
     background-color: #d1b195;
 }
-
-

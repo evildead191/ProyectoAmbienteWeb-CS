@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Libros - Biblioteca</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="ayuda.html">Ayuda y Soporte</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Mis Libros</h1>
+
+        <!-- Menú de pestañas -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'favoritos')" id="defaultOpen">Libros Favoritos</button>
+            <button class="tablinks" onclick="openTab(event, 'descargados')">Libros Descargados</button>
+        </div>
+
+        <!-- Contenido de pestañas -->
+        <div id="favoritos" class="tabcontent">
+            <h2>Libros Favoritos</h2>
+            <p>Aquí aparecerán los libros que has marcado como favoritos.</p>
+            <ul>
+                <li>📖 Cien Años de Soledad</li>
+                <li>📖 Don Quijote de la Mancha</li>
+                <li>📖 El Principito</li>
+            </ul>
+            <div class="image-container">
+                <img src="images/MisLibros_img.png" alt="Biblioteca" class="library-image">
+            </div>
+        </div>
+
+        <div id="descargados" class="tabcontent">
+            <h2>Libros Descargados</h2>
+            <p>Aquí encontrarás los libros que has descargado.</p>
+            <ul>
+                <li>📥 La Odisea</li>
+                <li>📥 Hamlet</li>
+                <li>📥 Moby Dick</li>
+            </ul>
+            <div class="image-container">
+                <img src="images/MisLibros_img.png" alt="Biblioteca" class="library-image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>

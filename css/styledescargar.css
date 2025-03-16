@@ -1,0 +1,24 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+
+.descargar {
+    background-color: #e6c7a5;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.descargar:hover {
+    background-color: #d1b195;
+}
+
+

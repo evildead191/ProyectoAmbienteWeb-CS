@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION["usuario"])) {
+    header("Location: index.php");
+    exit;
+}
+include("conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,20 +18,40 @@
 <body>
     <nav>
         <ul>
-            <li><a href="inicio.html">Inicio</a></li>
-            <li><a href="biblioteca.html">Biblioteca</a></li>
-            <li><a href="ayuda.html">Ayuda y Soporte</a></li>
-            <li><a href="configuracion.html">Configuración</a></li>
+            <li><a href="inicio.php">Inicio</a></li>
+            <li><a href="biblioteca.php">Biblioteca</a></li>
+            <li><a href="ayuda.php">Ayuda y Soporte</a></li>
+            <li><a href="configuracion.php">Configuración</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <h1>Biblioteca</h1>
         <ul>
-            <li><a href="recomendaciones.html">Recomendaciones Semanales</a></li>
-            <li><a href="descargarLibros.html">Descargar Libros</a></li>
-            <li><a href="misLibros.html">Mis Libros</a></li>
+            <li><a href="recomendaciones.php">Recomendaciones Semanales</a></li>
+            <li><a href="descargarLibros.php">Descargar Libros</a></li>
+            <li><a href="misLibros.php">Mis Libros</a></li>
         </ul>
+
+        <h2>Libros Disponibles</h2>
+        <div class="libros">
+            <?php
+            $sql = "SELECT * FROM libros";
+            $resultado = $conexion->query($sql);
+
+            if ($resultado->num_rows > 0) {
+                while ($libro = $resultado->fetch_assoc()) {
+                    echo "<div class='libro'>";
+                    echo "<h3>" . htmlspecialchars($libro['titulo']) . "</h3>";
+                    echo "<p><strong>Autor:</strong> " . htmlspecialchars($libro['autor']) . "</p>";
+                    echo "<a href='libros/" . urlencode($libro['archivo']) . "' download>📥 Descargar</a>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>No hay libros disponibles en este momento.</p>";
+            }
+            ?>
+        </div>
     </div>
 </body>
 </html>

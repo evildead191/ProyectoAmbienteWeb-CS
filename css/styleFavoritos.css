@@ -1,36 +1,20 @@
-body {
-    background-color: #c2a57c;
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* Estilos específicos para la página de favoritos */
+.favoritos-list {
+    list-style-type: none;
     padding: 0;
 }
 
-.contenido {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.Favoritos {
-    font-size: 24px;
-    font-weight: bold;
+.favoritos-list li {
     background-color: #e6c7a5;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.agregados {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #e6c7a5;
-    border-radius: 10px;
-}
-
-.libro {
-    background-color: white;
-    padding: 10px;
     margin: 10px 0;
+    padding: 10px;
     border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.favoritos-list li:hover {
+    background-color: #d1b195;
+    cursor: pointer;
 }

@@ -1,110 +1,73 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #d2b48c;
-    margin: 0;
-    padding: 0;
-}
+ /* Estilos generales */
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4;
+ }
 
-.container {
-    width: 85%;
-    margin: auto;
-    background: rgb(252, 216, 179);
-    padding: 30px;
-    border-radius: 25px;
-    margin-top: 20px;
-    text-align: center;
-}
+ nav {
+     background-color: #333;
+     padding: 10px;
+ }
 
-/* Navegación */
-nav {
-    background-color: #6d4c41;
-    padding: 10px 0;
-}
+ nav ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     justify-content: space-around;
+ }
 
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-}
+ nav ul li {
+     display: inline;
+ }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+ nav ul li a {
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+ }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
+ nav ul li a:hover {
+     color: #28a745;
+ }
 
-/* Estilo de pestañas */
-.tab {
-    overflow: hidden;
-    background-color: #efebe9;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
+ .container {
+     max-width: 800px;
+     margin: 20px auto;
+     padding: 20px;
+     background-color: white;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
 
-.tab button {
-    background-color: inherit;
-    border: none;
-    outline: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #4e342e;
-    transition: 0.3s;
-}
+ h1,
+ h2 {
+     color: #333;
+ }
 
-.tab button:hover {
-    background-color: #d7ccc8;
-}
+ /* Estilos para las pestañas */
+ .tab {
+     margin-bottom: 20px;
+ }
 
-.tab button.active {
-    background-color: #6d4c41;
-    color: white;
-}
+ .tablinks {
+     background-color: #e6c7a5;
+     border: none;
+     padding: 10px 20px;
+     font-size: 18px;
+     font-weight: bold;
+     border-radius: 5px;
+     cursor: pointer;
+     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+     margin-right: 10px;
+     text-decoration: none;
+     /* Elimina el subrayado de los enlaces */
+     color: #333;
+     /* Color del texto */
+ }
 
-/* Contenido de pestañas */
-.tabcontent {
-    display: none;
-    padding: 20px;
-    border-top: none;
-    text-align: left;
-}
-
-.tabcontent h2 {
-    color: #4e342e;
-    border-bottom: 3px solid black;
-    padding-bottom: 5px;
-}
-
-.tabcontent ul {
-    list-style: none;
-    padding: 0;
-}
-
-.tabcontent ul li {
-    background: #efebe9;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    color: #4e342e;
-}
-.image-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.library-image {
-    width: 90%;  /* Se adapta al tamaño del contenedor */
-    max-width: 800px;  /* No se hará más grande de 800px */
-    height: auto;  /* Mantiene la proporción */
-    border-radius: 10px;  /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
-}
+ .tablinks:hover {
+     background-color: #d1b195;
+ }

@@ -1,35 +1,20 @@
-body {
-    background-color: #c2a57c;
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* Estilos específicos para la página de descargados */
+.descargados-list {
+    list-style-type: none;
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.header {
-    font-size: 24px;
+.descargados-list li {
+    background-color: #a5c7e6;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
     font-weight: bold;
-    background-color: #e6c7a5;
-    padding: 15px;
-    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.descargados {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #e6c7a5;
-    border-radius: 10px;
-}
-.libro {
-    background-color: white;
-    padding: 5px;
-    margin: 7px 0;
-    border-radius: 3px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+.descargados-list li:hover {
+    background-color: #95b1d1;
+    cursor: pointer;
 }

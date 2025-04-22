@@ -23,55 +23,10 @@
 
         <!-- Menú de pestañas -->
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'favoritos')" id="defaultOpen">Libros Favoritos</button>
-            <button class="tablinks" onclick="openTab(event, 'descargados')">Libros Descargados</button>
+            <a href="favoritos.html" class="tablinks">Libros Favoritos</a>
+            <a href="descargados.html" class="tablinks">Libros Descargados</a>
         </div>
-
-        <!-- Contenido de pestañas -->
-        <div id="favoritos" class="tabcontent">
-            <h2>Libros Favoritos</h2>
-            <p>Aquí aparecerán los libros que has marcado como favoritos.</p>
-            <ul>
-                <li>📖 Cien Años de Soledad</li>
-                <li>📖 Don Quijote de la Mancha</li>
-                <li>📖 El Principito</li>
-            </ul>
-            <div class="image-container">
-                <img src="images/MisLibros_img.png" alt="Biblioteca" class="library-image">
-            </div>
-        </div>
-
-        <div id="descargados" class="tabcontent">
-            <h2>Libros Descargados</h2>
-            <p>Aquí encontrarás los libros que has descargado.</p>
-            <ul>
-                <li>📥 La Odisea</li>
-                <li>📥 Hamlet</li>
-                <li>📥 Moby Dick</li>
-            </ul>
-            <div class="image-container">
-                <img src="images/MisLibros_img.png" alt="Biblioteca" class="library-image">
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openTab(evt, tabName) {
-            let i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        document.getElementById("defaultOpen").click();
-    </script>
+    <script src="js/misLibros.js"></script>
 
 </body>
 </html>

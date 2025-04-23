@@ -7,7 +7,7 @@ document.getElementById('formulario-login').addEventListener('submit', function 
     // Simulación de validación (usuario: "admin", contraseña: "1234")
     if (usuario === 'admin' && contrasena === '1234') {
         // Redirigir a la página principal
-        window.location.href = 'inicio.html';
+        window.location.href = 'inicio.php';
     } else {
         // Mostrar mensaje de error
         document.getElementById('mensaje-error').innerText = 'Usuario o contraseña incorrectos.';

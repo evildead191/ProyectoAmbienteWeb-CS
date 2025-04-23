@@ -25,7 +25,7 @@ if (!isset($_SESSION["usuario"])) {
 
     <div class="container">
         <h1>Bienvenido a la Biblioteca Rural: El Rincón del Libro</h1>
-        <img src="images/Biblioteca.avif" alt="Biblioteca Rural" class="centered-image">
+        <img src="images/Biblioteca.jpg" alt="Biblioteca Rural" class="centered-image">
         <p>Explora nuestra colección de libros y disfruta de la lectura sin necesidad de internet.</p>
     </div>
 
